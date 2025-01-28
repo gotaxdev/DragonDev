@@ -1,0 +1,133 @@
+/* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    height: 100vh; /* Assurer que le body prend toute la hauteur de la page */
+    display: flex;
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer verticalement */
+    text-align: center; /* Centrer le texte */
+    position: relative; /* Position relative pour positionner la barre fixée à gauche */
+}
+
+/* Container principal */
+.container {
+    width: 100%; /* Prendre toute la largeur de la page */
+    padding-left: 260px; /* Laisser de l'espace pour la barre latérale */
+}
+
+/* Style pour la barre latérale (fixée à gauche) */
+.sidebar {
+    width: 250px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Prend toute la hauteur de la page */
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #ff0000;
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    position: relative;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #ff0000;
+}
+
+/* Sous-menu */
+.submenu {
+    list-style-type: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.submenu li {
+    position: relative;
+}
+
+.submenu li a {
+    font-size: 14px; /* Réduit la taille de la police */
+    font-family: 'Courier New', Courier, monospace; /* Change la police */
+    color: #ccc;
+    padding: 8px;
+    padding-left: 20px; /* Pour laisser de la place pour le trait */
+    border-left: 2px solid #ff0000; /* Petit trait rouge */
+    margin-bottom: 5px;
+    display: block;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.submenu li a:hover {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #fff;
+}
+
+/* Indicateur actif pour les catégories */
+.dropdown.active {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Style pour la petite barre rouge sur le côté gauche */
+.left-bar {
+    width: 5px; /* Largeur de la barre */
+    background-color: red; /* Couleur de la barre */
+    position: fixed; /* Position fixe sur l'écran */
+    top: 0; /* Démarre en haut de l'écran */
+    left: 0; /* Aligne la barre sur le côté gauche */
+    height: 100vh; /* Prend toute la hauteur de la page */
+    z-index: 9999; /* Assure que la barre soit au-dessus des autres éléments */
+}
+
+/* Style pour le titre dans le contenu */
+main h1 {
+    color: red; /* Titre en rouge */
+}
+
+/* Bouton retour à l'accueil */
+.back-home-button {
+    position: fixed; /* Fixé en bas à gauche de la page */
+    bottom: 50px; /* Distance par rapport au bas */
+    left: 30px; /* Distance par rapport au côté gauche */
+    background-color: #ff0000; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    text-decoration: none; /* Supprime la soulignure */
+    padding: 10px 20px; /* Espacement interne du bouton */
+    border-radius: 5px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Police en gras */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour le bouton */
+    transition: background-color 0.3s, transform 0.2s; /* Effet sur le hover */
+}
+
+.back-home-button:hover {
+    background-color: #ffffff; /* Couleur de fond en hover */
+    color: #ff0000; /* Couleur du texte en hover */
+    transform: translateY(-2px); /* Légère élévation en hover */
+}

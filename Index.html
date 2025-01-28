@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DragonDev" />
+	<meta name="keywords" content="Bot, support, botfr, fr" />
+	<meta name="author" content="gotax" />
+    <title>DragonDev - Support</title>
+  <!--favicon-img--> 
+  <link rel="icon" type="image/png" href="images/">
+   <!--favicon-img-->
+   <!--main css file should not be removed -->
+    <link rel="stylesheet" href="Public/css/index2.css">
+    <!--main css file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+</head>
+<body>
+    <!--contains all the div-->
+    <div id="all">
+    <!--mouse  follower-->
+        <div class="cursor"></div>
+    <!--mouse  follower-->
+    <!--loader-->
+        <div id="loader">
+            <span class="color">Dragon</span>Dev
+        </div>
+    <!--loader-end-->
+    <!--link-screen-->
+        <div id="breaker">
+        </div>
+        <div id="breaker-two">
+        </div>
+    <!--link-screen-->
+        <!--Main-Section-->
+        <!--Navigator-fullscreen-->
+        <div id="navigation-content">
+            <div class="logo">
+                <img src="Public/images/" alt="logo">
+            </div>
+            <div class="navigation-close">
+                <span class="close-first"></span>
+                <span class="close-second"></span>
+            </div>
+            <div class="navigation-links">
+                <a href="Index.html" data-text="Accueille" id="home-link" >Accueil</a>
+                <a href="recrutement.html" data-text="Recrutement" id="about-link" >Recrutement</a>
+                <a href="équipes.html" data-text="Nos Équipes" id="blog-link" >Nos Équipes</a>
+                <a href="bots.html" data-text="Nos Bots" id="blog-link" >Nos Bots</a>
+                <a href="service.html" data-text="Nos Service" id="portfolio-link" >Nos Service</a>
+                <a href="contact.html" data-text="Contact" id="contact-link" >Contact</a>
+            </div>
+        </div>
+        <!--Navigator-Fullscreen END-->
+          <!--Home Page-->
+        <!--Menubar-->
+        <div id="navigation-bar">
+            <img src="Public/images/willy wonka logo.png" alt="logo">
+            <div class="menubar">
+                <span class="first-span"></span>
+                <span class="second-span"></span>
+                <span class="third-span"></span>
+            </div>
+        </div>
+        <!--Menubar End-->
+          <!--Header-->
+        <div id="header">
+            <div id="particles"></div>
+
+            <div class="header-content">
+                <div class="header-content-box">
+                    <div class="firstline"><span class="color">Dragon</span>Dev</div>
+                    <div class="secondline">
+                    Je suis un
+            <span class="txt-rotate color" data-period="1200"data-rotate='[ " Joueur", " Créateur", " Modérateur" ]'></span><span class="slash">|</span> de serveur Discord.
+        </div>
+        <div class="contact">
+    
+            <style>
+                /* Style du lien et de l'image */
+                .contact-link {
+                    position: relative; /* Nécessaire pour positionner la bulle par rapport au bouton */
+                    display: inline-block;
+                }
+        
+                /* Effet au survol */
+                .contact-link:hover img {
+                    filter: hue-rotate(180deg); /* Change la teinte vers le bleu */
+                    opacity: 0.8; /* Rend l'image légèrement transparente */
+                    animation: shake 0.3s infinite; /* Applique l'animation de tremblement */
+                }
+        
+        
+                
+                /* Style de la bulle */
+                .contact-link .tooltip {
+                    display: none; /* Cachée par défaut */
+                    position: absolute;
+                    bottom: 25%; /* Positionne la bulle au-dessus du bouton */
+                    left: -230%;
+                    transform: translateX(-50%);
+                    background-color: #666666; /* Couleur grise */
+                    color: #000; /* Texte noir */
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    white-space: nowrap; /* Empêche le retour à la ligne */
+                    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+                    z-index: 10; /* Assure que la bulle soit devant */
+                }
+                
+                /* Flèche sous la bulle */
+                .contact-link .tooltip::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%; /* Place la flèche en bas de la bulle */
+                    left: 100%;
+                    transform: translateX(-50%);
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #666666 transparent transparent transparent; /* Triangle gris */
+                }
+                
+                /* Affiche la bulle au survol */
+                .contact-link:hover .tooltip {
+                    display: block;
+                }
+                </style>
+                
+                <body>
+                    <!-- Image pour ouvrir la modale -->
+                    <img id="openModal" src="Public/images/discord.png" alt="Ouvrir" title="Ouvrir la recherche">
+                  
+                    <!-- Fenêtre modale -->
+                    <div id="modal" class="modal">
+                      <span id="closeModal" class="close">&times;</span>
+                      <input type="text" id="searchBar" placeholder="Rechercher un serveur...">
+                      <div id="serverList">
+                        <!-- Liste des serveurs -->
+                      </div>
+                    </div>
+                  
+                    <script>
+                      const modal = document.getElementById("modal");
+                      const openModalButton = document.getElementById("openModal");
+                      const closeModalButton = document.getElementById("closeModal");
+                      const searchBar = document.getElementById("searchBar");
+                      const serverList = document.getElementById("serverList");
+                  
+                      // Exemple de données de serveur
+                      const servers = [
+                      { name: "Discord Support Bot", logo: "images/logo_principale_support.png", invite: "https://discord.gg/BNR4zuGC4a" },
+                        { name: "Discord Graphiste", logo: "images/logo_principale_graphiste.png", invite: "https://discord.gg/SFKHV3j7Wv" },
+                        { name: "Discord 100% Pub", logo: "images/logo_principale_pub.png", invite: "https://discord.gg/RZQmUHy952"},
+                        { name: "Discord Communaitre", logo: "images/logo_principale_commu.png", invite: "https://discord.gg/D5ZvgnaeK6"},
+                      ];
+                  
+                      // Fonction pour afficher les serveurs
+                      function displayServers(filter = "") {
+                        serverList.innerHTML = "";
+                        const filteredServers = servers.filter(server =>
+                          server.name.toLowerCase().includes(filter.toLowerCase())
+                        );
+                        filteredServers.forEach(server => {
+                          const serverItem = document.createElement("div");
+                          serverItem.className = "server-item";
+                          serverItem.innerHTML = `
+                            <img src="${server.logo}" alt="Logo">
+                            <span>${server.name}</span>
+                          `;
+                          serverItem.addEventListener("click", () => {
+                            window.open(server.invite, "_blank");
+                          });
+                          serverList.appendChild(serverItem);
+                        });
+                      }
+                  
+                      // Événements
+                      openModalButton.addEventListener("click", () => {
+                        modal.style.display = "block";
+                        displayServers();
+                      });
+                  
+                      closeModalButton.addEventListener("click", () => {
+                        modal.style.display = "none";
+                      });
+                  
+                      searchBar.addEventListener("input", (e) => {
+                        displayServers(e.target.value);
+                      });
+                  
+                      // Fermer la fenêtre modale en cliquant à l'extérieur
+                      window.addEventListener("click", (e) => {
+                        if (e.target === modal) {
+                          modal.style.display = "none";
+                        }
+                      });
+                    </script>
+
+                    
+
+<body>
+  <!-- Image pour ouvrir la modale 1 -->
+  <img id="openModal1" src="Public/images/symbole-telephone-portable-gris.png" alt="Ouvrir" title="Ouvrir la recherche">
+  
+  <!-- Fenêtre modale 1 -->
+  <div id="modal1" class="modal">
+    <span id="closeModal1" class="close">&times;</span>
+    <input type="text" id="searchBar1" placeholder="Rechercher un Reseaux...">
+    <div id="serverList1">
+      <!-- Liste des serveurs -->
+    </div>
+  </div>
+
+  <script>
+      // Modale 1
+      const modal1 = document.getElementById("modal1");
+      const openModalButton1 = document.getElementById("openModal1");
+      const closeModalButton1 = document.getElementById("closeModal1");
+      const searchBar1 = document.getElementById("searchBar1");
+      const serverList1 = document.getElementById("serverList1");
+
+      // Exemple de données de serveur
+      const servers1 = [
+          { name: "Youtube", logo: "Public/images/logo_principale_youtube.png", invite: "https://www.youtube.com/channel/UCZyah01RmxZMrNakJOexijg" },
+          { name: "Twitch", logo: "Public/images/logo_principale_twitch.png", invite: "https://www.twitch.tv/dronix_officielle" },
+          { name: "TikTok", logo: "Public/images/logo_principale_tiktok.png", invite: "https://www.tiktok.com/@atristo_2222" },
+      ];
+
+      // Fonction pour afficher les serveurs
+      function displayServers1(filter = "", serverList) {
+          serverList.innerHTML = "";
+          const filteredServers1 = servers1.filter(server =>
+              server.name.toLowerCase().includes(filter.toLowerCase())
+          );
+          filteredServers1.forEach(server => {
+              const serverItem = document.createElement("div");
+              serverItem.className = "server-item";
+              serverItem.innerHTML = `
+                  <img src="${server.logo}" alt="Logo">
+                  <span>${server.name}</span>
+              `;
+              serverItem.addEventListener("click", () => {
+                  window.open(server.invite, "_blank");
+              });
+              serverList.appendChild(serverItem);
+          });
+      }
+
+      // Événements pour modale 1
+      openModalButton1.addEventListener("click", () => {
+          modal1.style.display = "block";
+          displayServers1("", serverList1);
+      });
+
+      closeModalButton1.addEventListener("click", () => {
+          modal1.style.display = "none";
+      });
+
+      searchBar1.addEventListener("input", (e) => {
+          displayServers1(e.target.value, serverList1);
+      });
+
+      // Fermer la fenêtre modale en cliquant à l'extérieur
+      window.addEventListener("click", (e) => {
+          if (e.target === modal1) {
+              modal1.style.display = "none";
+          }
+      });
+  </script>
+</body>
+
+                  
+    </div>    
+            </div>
+            </div>
+            <!--header image-->
+            <div class="header-image">
+            <img src="Public/images/man.jpg" alt="logo">
+            </div>
+            <!--header image end-->
+        </div>
+           <!--Header End-->
+        <!--HomePage End-->
+        <!--Main-Section End-->
+        <!--about-->
+        <div id="about">
+            <div class="color-changer">
+            <div class="color-panel">
+                <img src="Public/images/gear.png" alt="">
+            </div>
+            <div class="color-selector">
+                <div class="heading">Custom Colors</div>
+                <div class="colors">
+                    <ul >
+                    <li>
+                        <a href="#0" class="color-red " title="color-red"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-ping" title="color-ping"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-purple" title="color-purple"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-malt" title="color-malt"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-green" title="color-green"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-blue" title="color-blue"></a>
+                    </li>
+                    <li>
+                        <a href="#0" class="color-orange" title="color-orange"></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+            </div>
+
+            
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Artrops Groupe - <a href="https://x.com/gotaxxfn"> gotaxdev</a></p>
+        </div>
+    </div>
+       <!--copyright-section-->
+    <!--all the divisions-->
+    <script src="Public/js/jquery.min.js"></script>
+    <script src="Public/js/particles.js"></script>
+    <script src="Public/js/particles.min.js"></script>
+    <script src="Public/js/index.js"></script>
+    <!--particles script-->
+    <script>
+ particlesJS("particles", {"particles":{"number":{"value":120,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":true,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":true,"speed":0,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":0,"color":"#ffffff","opacity":0.24463576890600452,"width":1.2626362266116362},"move":{"enable":true,"speed":3,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"grab"},"onclick":{"enable":true,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+</script>
+</body>
+</html>

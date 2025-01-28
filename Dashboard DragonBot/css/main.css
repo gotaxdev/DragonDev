@@ -1,0 +1,352 @@
+/* Style général */
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #121212; /* Noir */
+    color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    border-top: 6px #FF0000 solid !important; /* Rouge */
+    font-size: 16px;
+}
+
+.navbar {
+    box-shadow: none !important;
+    background-color: transparent;
+}
+
+.navbar-brand {
+    font-size: 25px !important;
+}
+
+.navbar-toggler-icon {
+    color: #ffffff !important;
+}
+
+.nav-link {
+    font-size: 14px !important;
+    color: #ffffff !important;
+    font-family: Lato, sans-serif !important;
+    text-transform: capitalize !important;
+}
+
+.nav-link:hover {
+    color: #FF0000 !important; /* Rouge */
+    font-weight: bold !important;
+}
+
+.login-btn {
+    border: 2px solid #FF0000 !important; /* Rouge */
+    font-size: 10px !important;
+    color: #ffffff !important;
+}
+
+.login-btn:hover {
+    background: #FF0000 !important; /* Rouge */
+    color: #ffffff !important;
+}
+
+/* Section Heading */
+.heading {
+    padding: 100px 60px !important; /* Réduction de l'espace du padding pour remonter les éléments */
+    color: #fff !important;
+    background-image: url("../assets/wavy-purple-by-nouridio.svg") !important;
+    background-position: bottom !important;
+    background-size: 300% !important;
+    background-repeat: no-repeat !important;
+}
+
+.title {
+    line-height: 90px !important;
+    margin-bottom: -2px !important;
+    font-size: 30px !important;
+    margin-top: -20px !important; /* Déplace un peu plus haut */
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.685) !important;
+    font-size: 16px !important;
+    font-family: 'Lato', sans-serif;
+    margin-top: -10px !important; /* Déplace un peu plus haut */
+}
+
+
+/* Boutons principaux */
+.btn-primary {
+    background-color: #FF0000 !important; /* Rouge */
+    border: none;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #CC0000 !important; /* Rouge plus foncé */
+}
+
+.btn-secondary {
+    background-color: #1D1D1D !important; /* Noir */
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #333333 !important; /* Gris foncé */
+}
+
+/* Section Features */
+.features {
+    text-align: center !important;
+    background:  #FF0000 !important;
+    padding: 60px 50px !important;
+    background-image: url("../assets/wavy-dark-by-nouridio.svg") !important;
+    background-position: bottom !important;
+    background-size: 200% !important;
+    background-repeat: no-repeat !important;
+}
+
+.features .title {
+    font-size: 40px;
+    color: #ffffff;
+    line-height: 70px;
+}
+
+.features .subtitle {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Cartes */
+.card {
+    background: #121212 !important; /* Noir */
+    border-radius: 10px !important;
+    border: 2px solid #FF0000 !important; /* Rouge */
+    margin: 10px auto;
+    color: #ffffff;
+    box-shadow: 5px 8px 14px rgba(255, 0, 0, 0.4);
+}
+
+.card .card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #FF0000 !important; /* Rouge */
+}
+
+.card .card-text {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.features .card-body {
+    text-align: left;
+    padding: 20px;
+}
+
+/* Section Statistics */
+.statistics {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.statistics .card-body {
+    padding: 20px;
+    background-color: #1D1D1D; /* Noir */
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+.statistics .card-title {
+    font-size: 80px;
+    font-weight: bold;
+    color: #FF0000; /* Rouge */
+}
+
+.statistics p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* Section Start */
+.start {
+    padding: 60px 50px !important;
+    background-color: #121212 !important;
+    display: flex; /* Ajout de Flexbox */
+    justify-content: center; /* Centrage horizontal */
+    align-items: center; /* Centrage vertical */
+    height: 50vh; /* Hauteur de la section pour occuper tout l'espace de la fenêtre */
+}
+
+.start .card {
+    background: #121212;
+    color: #ffffff;
+    border: 10px solid #FF0000;
+    border-radius: 10px;
+    box-shadow: 5px 8px 14px rgba(255, 0, 0, 0.4);
+    max-width: 580px; /* Limiter la largeur de la carte si nécessaire */
+    width: 400%; /* La carte occupe toute la largeur disponible jusqu'à 400px */
+}
+
+.start .card .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF0000; /* Rouge */
+}
+
+.start .card .subtitle {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Pied de page */
+.footer {
+    text-align: center;
+    background-color: #181818;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 30px 20px;
+}
+
+.footer .nouridio {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FF0000; /* Rouge */
+}
+
+.footer .nouridio a {
+    color: #fff5f5; /* Rouge */
+    text-decoration: none;
+}
+
+.footer .bot-footer {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* RESET STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    background-color: #121212;
+}
+
+/* NAVIGATION BAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #121212;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #9c9c9c;
+}
+
+.login-btn {
+    background: none;
+    border: 1px solid #ffffff;
+    padding: 8px 15px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+/* HERO SECTION */
+.hero-section {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #121212;
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%236c63ff" fill-opacity="1" d="M0,224L30,213.3C60,203,120,181,180,186.7C240,192,300,224,360,234.7C420,245,480,235,540,213.3C600,192,660,160,720,154.7C780,149,840,171,900,176C960,181,1020,171,1080,149.3C1140,128,1200,96,1260,101.3C1320,107,1380,149,1410,170.7L1440,192L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z"></path></svg>');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #9c9c9c;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary {
+    background-color: #6c63ff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #574bcb;
+}
+
+.btn-secondary {
+    background-color: #222222;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #383838;
+}
+
+
